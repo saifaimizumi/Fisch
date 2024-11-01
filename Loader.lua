@@ -28,7 +28,7 @@ do
     Fluent:Notify({
         Title = "Notification",
         Content = "Kurumi Hub running script",
-        SubContent = "SubContent", -- Optional
+        SubContent = "", -- Optional
         Duration = 10 -- Set to nil to make the notification not disappear
     })
 
@@ -71,10 +71,10 @@ if shakeUI then onChildAdded(shakeUI) end
 
 PlayerGUI.ChildAdded:Connect(onChildAdded)
 
-    Options.MyToggle:SetValue(false)
+Options.MyToggle:SetValue(false)
 
 
-local Toggle = Tabs.Main:AddToggle("MyToggle", {Title = "Auto Collect Playtime Rewards", Default = false })
+local Toggle = Tabs.Genaral:AddToggle("MyToggle", {Title = "AutoSell", Default = false })
 
 Toggle:OnChanged(function(Value)
 _G.Rewards = Value
@@ -135,7 +135,7 @@ Options.MyToggle:SetValue(false)
 
 
 
-local Toggle = Tabs.Main:AddToggle("MyToggle", {Title = "AntiAFK", Default = false })
+local Toggle = Tabs.Genaral:AddToggle("MyToggle", {Title = "AntiAFK", Default = false })
 
     Toggle:OnChanged(function(Value)
         _G.antiAFK = Value
